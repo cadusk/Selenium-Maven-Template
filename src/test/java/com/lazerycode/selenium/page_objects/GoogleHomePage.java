@@ -37,13 +37,6 @@ public class GoogleHomePage {
         return new GoogleSearchPage();
     }
 
-    public GoogleHomePage acceptCookies() {
-        wait.until(ExpectedConditions.presenceOfElementLocated(acceptCookiesPopup.by()));
-        acceptCookiesPopup.findWebElement().click();
-
-        return this;
-    }
-
     public void getLucky() {
         imFeelingLucky.findWebElement().click();
     }

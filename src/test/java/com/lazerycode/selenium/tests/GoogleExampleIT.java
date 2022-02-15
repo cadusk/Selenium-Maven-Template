@@ -25,9 +25,6 @@ public class GoogleExampleIT extends DriverBase {
         //Instantiate an instance of our GoogleHomePage page object
         GoogleHomePage googleHomePage = new GoogleHomePage();
 
-        // First we agree to Google's cookie usage terms
-        googleHomePage.acceptCookies();
-
         // Then we perform a google search for Cheese
         GoogleSearchPage googleSearchPage = googleHomePage.enterSearchTerm("Cheese").submitSearch();
 
@@ -53,15 +50,12 @@ public class GoogleExampleIT extends DriverBase {
         //Instantiate an instance of our GoogleHomePage page object
         GoogleHomePage googleHomePage = new GoogleHomePage();
 
-        // First we agree to Google's cookie usage terms
-        googleHomePage.acceptCookies();
-
         // Then we perform a google search for Cheese
         GoogleSearchPage googleSearchPage = googleHomePage.enterSearchTerm("Milk").submitSearch();
 
         // Google's search is rendered dynamically with JavaScript.
         // We wait for up to 15 seconds for the page to load, an exception is thrown if it doesn't
-        googleSearchPage.waitForPageTitleToStartWith("milk");
+        googleSearchPage.waitForPageTitleToStartWith("Milk");
 
         //Normally you would have some assertions to check things that you really care about
         assertThat(googleSearchPage.getPageTitle()).isEqualTo("Milk - Google Search");
