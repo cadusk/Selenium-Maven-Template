@@ -64,7 +64,7 @@ services:
       - .:/usr/src/selenium-tests/
     networks:
       - default
-    command: ["mvn", "verify", "-Dbrowser=chrome", "-Dheadless=false", "-Dremote=true", "-DseleniumGridURL=http://selenium-hub:4444/wd/hub"]
+    command: ["mvn", "clean", "verify", "-Dbrowser=chrome", "-Dheadless=false", "-Dremote=true", "-DseleniumGridURL=http://selenium-hub:4444/wd/hub"]
 
 
 networks:
