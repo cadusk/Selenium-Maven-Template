@@ -14,6 +14,19 @@ my Selenium book [Mastering Selenium Webdriver](https://www.amazon.co.uk/Masteri
 All dependencies should now be downloaded and the example google cheese test will have run successfully in headless mode (Assuming you have Firefox installed in the default
 location)
 
+### Runnig the suit with docker and docker-compose
+
+1. Open a terminal window/command prompt
+2. Clone this project.
+3. `cd Selenium-Maven-Template` (Or whatever folder you cloned it into)
+4. `docker-compose up -d`
+5. `docker-compose run --rm test-runner`
+
+While the tests run, you should be able to access the Selenium Grid service via [http://localhost:4444/ui/index.html](http://localhost:4444/ui/index.html).
+
+To login into an active session and see the tests being executed, use the password `secret` when requested.
+
+
 ### What should I know?
 
 - To run any unit tests that test your Selenium framework you just need to ensure that all unit test file names end, or start with "test" and they will be run as part of the build.
